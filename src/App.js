@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import SearchResults from './pages/SearchResults';
+// import BookingForm from './pages/BookingForm';
+import Banner from './components/Banner/Banner';
+import BookingsPage from './pages/BookingsPage';
+import HeroSection from './components/HeroSection';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Banner />
+      <Navbar />
+      <HeroSection />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/search-results" element={<SearchResults />} />
+        {/* <Route path="/book/:id" element={<BookingForm />} /> */}
+        <Route path="/my-bookings" element={<BookingsPage />} />
+      </Routes>
+    </Router>
   );
 }
 
