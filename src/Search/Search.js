@@ -25,7 +25,6 @@ export default function Search() {
   const [showBookingSuccess, setShowBookingSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  //API to fetch hospitals based on state and city selection
   useEffect(() => {
     const getHospitals = async () => {
       setHospitals([]);
