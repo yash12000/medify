@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import styles from "../NavBar/Navbar.module.css";
+import styles from "../NavBar/NavBar.module.css";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
